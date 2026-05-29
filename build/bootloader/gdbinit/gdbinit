@@ -1,0 +1,2 @@
+source /Users/bhautik/edge_ai_anomaly/build/bootloader/gdbinit/symbols
+source /Users/bhautik/edge_ai_anomaly/build/bootloader/gdbinit/connect

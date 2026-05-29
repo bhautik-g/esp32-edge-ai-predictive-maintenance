@@ -1,0 +1,223 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbserial-1140 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4037b875: spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:105
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+--- 0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4037b872: xt_utils_get_raw_core_id at /Users/bhautik/esp-idf-v5.4.1/components/xtensa/include/xt_utils.h:52
+---  (inlined by) spinlock_acquire at /Users/bhautik/esp-idf-v5.4.1/components/esp_hw_support/include/spinlock.h:89
+---  (inlined by) xPortEnterCriticalTimeout at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+--- 0x4037a6da: vPortEnterCritical at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+---  (inlined by) prvReceiveGeneric at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:841
+--- 0x4037a9a5: xRingbufferReceive at /Users/bhautik/esp-idf-v5.4.1/components/esp_ringbuf/ringbuf.c:1110
+--- 0x42009e41: onewire_flush_rmt_rx_buf at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:105
+--- 0x42009fb7: _reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb_rmt.c:129
+--- 0x420099a9: _search at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:137
+--- 0x42009afd: owb_search_first at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:678
+--- 0x4200989f: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:234
+--- 0x4201d13b: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037b6a1: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375a88: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

@@ -1,0 +1,135 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbserial-1140 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+[0m
+[0;33m--- 0x40375c99: panic_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/panic.c:454
+--- 0x4037b9b9: esp_system_abort at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/esp_system_chip.c:87
+--- 0x40382605: abort at /Users/bhautik/esp-idf-v5.4.1/components/newlib/abort.c:38
+--- 0x40375575: call_start_cpu0 at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/cpu_start.c:600
+--- 0x40045c01: ets_run_flash_bootloader in ROM
+--- 0x40043ab6: main in ROM
+--- 0x40034c45: .stack_ok in ROM
+[0m
+[0;33m--- 0x40375bd9: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

@@ -1,0 +1,45 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbserial-1140 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200a138: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:476
+[0m
+[0;33m--- 0x42011ff2: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:159
+--- 0x4201202c: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:175
+[0m
+[0;33m--- 0x4200a135: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:470 (discriminator 1)
+--- 0x4200ac1b: ds18b20_convert_all at /Users/bhautik/edge_ai_anomaly/components/esp32-ds18b20/ds18b20.c:493
+--- 0x42009f99: read_temperature at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:267
+--- 0x4200a014: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:307
+--- 0x4202156f: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037bd4d: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375acc: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a138: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:476
+[0m
+[0;33m--- 0x42011ff2: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:159
+--- 0x4201202c: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:175
+[0m
+[0;33m--- 0x4200a135: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:470 (discriminator 1)
+--- 0x4200ac1b: ds18b20_convert_all at /Users/bhautik/edge_ai_anomaly/components/esp32-ds18b20/ds18b20.c:493
+--- 0x42009f99: read_temperature at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:267
+--- 0x4200a014: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:307
+--- 0x4202156f: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037bd4d: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375acc: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a138: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:476
+[0m
+[0;33m--- 0x42011ff2: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:159
+--- 0x4201202c: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:175
+[0m
+[0;33m--- 0x4200a135: owb_reset at /Users/bhautik/edge_ai_anomaly/components/esp32-owb/owb.c:470 (discriminator 1)
+--- 0x4200ac1b: ds18b20_convert_all at /Users/bhautik/edge_ai_anomaly/components/esp32-ds18b20/ds18b20.c:493
+--- 0x42009f99: read_temperature at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:267
+--- 0x4200a014: app_main at /Users/bhautik/edge_ai_anomaly/main/edge_ai_anomaly.c:307
+--- 0x4202156f: main_task at /Users/bhautik/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x4037bd4d: vPortTaskWrapper at /Users/bhautik/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375acc: esp_restart_noos at /Users/bhautik/esp-idf-v5.4.1/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m
