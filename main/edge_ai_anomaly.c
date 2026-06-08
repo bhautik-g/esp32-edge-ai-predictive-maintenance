@@ -13,8 +13,8 @@
 #include "owb_gpio.h"
 #include "ds18b20.h"
 
-static const char *TAG = "SENSOR_TEST";
-
+static const char *TAG = "DATA_COLLECTOR";
+static const char *LABEL = "NORMAL";
 
 // ======================================================
 // MPU6050 CONFIG
@@ -281,6 +281,16 @@ float read_temperature(void)
     return NAN;
 }
 
+uint64_t get_timestamp_ms()
+{
+    return esp_timer_get_time() / 1000ULL;
+}
+
+float get_vibration_magnitude(float ax, float ay, float az)
+{
+    return sqrtf(ax * ax + ay * ay + az * az);
+}
+
 // ======================================================
 // MAIN
 // ======================================================
@@ -305,6 +315,7 @@ void app_main(void)
         return;
     }
 
+    ESP_LOGI(TAG, "timestamp_ms,ax,ay,az,vib_mag,sound,temp,label");
     while (1)
     {
         float ax, ay, az;
@@ -315,12 +326,23 @@ void app_main(void)
 
         float temp = read_temperature();
 
-        ESP_LOGI(TAG,
-                 "ACCEL: X=%.2f Y=%.2f Z=%.2f | SOUND=%.2f | TEMP=%.2f",
-                 ax, ay, az,
-                 sound,
-                 temp);
+        // This used for test
+        // ESP_LOGI(TAG,
+        //          "TIMESTAMP_MS: %lu | ACCEL: X=%.2f Y=%.2f Z=%.2f | VIBRATION=%.2f | SOUND=%.2f | TEMP=%.2f | LABEL=%s",
+        //          get_timestamp_ms(),
+        //          ax, ay, az, get_vibration_magnitude(ax, ay, az),
+        //          sound,
+        //          temp,
+        //          LABEL);
+        
+        // CSV data logging format
+        ESP_LOGI(TAG, "%lu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%s", 
+            get_timestamp_ms(), 
+            ax, ay, az, get_vibration_magnitude(ax, ay, az), 
+            sound, 
+            temp, 
+            LABEL);
 
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
