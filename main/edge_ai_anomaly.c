@@ -4,6 +4,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+#include "esp_timer.h"
+
 #include "driver/i2c.h"
 #include "driver/i2s_std.h"
 
@@ -14,7 +16,7 @@
 #include "ds18b20.h"
 
 static const char *TAG = "DATA_COLLECTOR";
-static const char *LABEL = "NORMAL";
+static const char *LABEL = "IMBALANCE_SPEED2";
 
 // ======================================================
 // MPU6050 CONFIG
@@ -315,16 +317,25 @@ void app_main(void)
         return;
     }
 
-    ESP_LOGI(TAG, "timestamp_ms,ax,ay,az,vib_mag,sound,temp,label");
-    while (1)
+    float temp = read_temperature();
+    uint64_t last_temp_update = get_timestamp_ms();
+
+    printf("id,timestamp_ms,ax,ay,az,vib_mag,sound,temp,label\n");
+    for (int i = 0; i < 10000; i++)  // logs 10000 samples (1000 seconds at 100ms intervals)
     {
+        uint64_t timestamp_ms = get_timestamp_ms();
         float ax, ay, az;
 
         mpu6050_read_accel(&ax, &ay, &az);
 
         float sound = read_sound_level();
 
-        float temp = read_temperature();
+        // Update temperature only once per 10 seconds to reduce sensor read overhead
+        if ((timestamp_ms - last_temp_update) >= 10000)
+        {
+            temp = read_temperature();
+            last_temp_update = timestamp_ms;
+        }
 
         // This used for test
         // ESP_LOGI(TAG,
@@ -336,13 +347,15 @@ void app_main(void)
         //          LABEL);
         
         // CSV data logging format
-        ESP_LOGI(TAG, "%lu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%s", 
-            get_timestamp_ms(), 
-            ax, ay, az, get_vibration_magnitude(ax, ay, az), 
-            sound, 
-            temp, 
-            LABEL);
+        printf("%d,%llu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%s\n", 
+                i,
+                get_timestamp_ms(), 
+                ax, ay, az, get_vibration_magnitude(ax, ay, az), 
+                sound, 
+                temp, 
+                LABEL);
 
         vTaskDelay(pdMS_TO_TICKS(100));
     }
+    ESP_LOGI(TAG, "Data collection complete");
 }
