@@ -15,7 +15,9 @@
 #include "owb_gpio.h"
 #include "ds18b20.h"
 
-static const char *TAG = "DATA_COLLECTOR";
+#include "decision_tree_model.h"
+
+static const char *TAG = "ML";
 static const char *LABEL = "IMBALANCE_SPEED2";
 
 // ======================================================
@@ -297,20 +299,23 @@ float get_vibration_magnitude(float ax, float ay, float az)
 // MAIN
 // ======================================================
 
+#define WINDOW_SIZE 100
+
 void app_main(void)
 {
     ESP_ERROR_CHECK(i2c_master_init());
 
     mpu6050_init();
-
     i2s_microphone_init();
 
     owb_init();
+
     if (!owb_found_devices())
     {
         ESP_LOGE(TAG, "No DS18B20 devices found on the bus");
         return;
     }
+
     if (!ds18b20_sensor_init())
     {
         ESP_LOGE(TAG, "Failed to initialize DS18B20 sensor");
@@ -320,42 +325,108 @@ void app_main(void)
     float temp = read_temperature();
     uint64_t last_temp_update = get_timestamp_ms();
 
-    printf("id,timestamp_ms,ax,ay,az,vib_mag,sound,temp,label\n");
-    for (int i = 0; i < 10000; i++)  // logs 10000 samples (1000 seconds at 100ms intervals)
+    float sound_buf[WINDOW_SIZE];
+    float vib_buf[WINDOW_SIZE];
+
+    printf("window_id,timestamp_ms,sound_std,sound_peak_to_peak,sound_mean,sound_rms,sound_max,temp_mean,vib_mean,vib_rms,prediction\n");
+
+    for (int window_id = 0; window_id < 100; window_id++)
     {
-        uint64_t timestamp_ms = get_timestamp_ms();
-        float ax, ay, az;
+        float temp_sum = 0.0f;
 
-        mpu6050_read_accel(&ax, &ay, &az);
-
-        float sound = read_sound_level();
-
-        // Update temperature only once per 10 seconds to reduce sensor read overhead
-        if ((timestamp_ms - last_temp_update) >= 10000)
+        for (int i = 0; i < WINDOW_SIZE; i++)
         {
-            temp = read_temperature();
-            last_temp_update = timestamp_ms;
+            uint64_t timestamp_ms = get_timestamp_ms();
+
+            float ax, ay, az;
+
+            mpu6050_read_accel(&ax, &ay, &az);
+
+            float sound = read_sound_level();
+
+            if ((timestamp_ms - last_temp_update) >= 10000)
+            {
+                temp = read_temperature();
+                last_temp_update = timestamp_ms;
+            }
+
+            float vib_mag = get_vibration_magnitude(ax, ay, az);
+
+            sound_buf[i] = sound;
+            vib_buf[i] = vib_mag;
+            temp_sum += temp;
+
+            vTaskDelay(pdMS_TO_TICKS(100));
         }
 
-        // This used for test
-        // ESP_LOGI(TAG,
-        //          "TIMESTAMP_MS: %lu | ACCEL: X=%.2f Y=%.2f Z=%.2f | VIBRATION=%.2f | SOUND=%.2f | TEMP=%.2f | LABEL=%s",
-        //          get_timestamp_ms(),
-        //          ax, ay, az, get_vibration_magnitude(ax, ay, az),
-        //          sound,
-        //          temp,
-        //          LABEL);
-        
-        // CSV data logging format
-        printf("%d,%llu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%s\n", 
-                i,
-                get_timestamp_ms(), 
-                ax, ay, az, get_vibration_magnitude(ax, ay, az), 
-                sound, 
-                temp, 
-                LABEL);
+        float sound_sum = 0.0f;
+        float sound_sq_sum = 0.0f;
+        float sound_max = sound_buf[0];
+        float sound_min = sound_buf[0];
 
-        vTaskDelay(pdMS_TO_TICKS(100));
+        float vib_sum = 0.0f;
+        float vib_sq_sum = 0.0f;
+
+        for (int i = 0; i < WINDOW_SIZE; i++)
+        {
+            sound_sum += sound_buf[i];
+            sound_sq_sum += sound_buf[i] * sound_buf[i];
+
+            if (sound_buf[i] > sound_max)
+                sound_max = sound_buf[i];
+
+            if (sound_buf[i] < sound_min)
+                sound_min = sound_buf[i];
+
+            vib_sum += vib_buf[i];
+            vib_sq_sum += vib_buf[i] * vib_buf[i];
+        }
+
+        float sound_mean = sound_sum / WINDOW_SIZE;
+        float sound_rms = sqrtf(sound_sq_sum / WINDOW_SIZE);
+
+        float sound_variance = 0.0f;
+
+        for (int i = 0; i < WINDOW_SIZE; i++)
+        {
+            float diff = sound_buf[i] - sound_mean;
+            sound_variance += diff * diff;
+        }
+
+        sound_variance /= WINDOW_SIZE;
+
+        float sound_std = sqrtf(sound_variance);
+        float sound_peak_to_peak = sound_max - sound_min;
+
+        float vib_mean = vib_sum / WINDOW_SIZE;
+        float vib_rms = sqrtf(vib_sq_sum / WINDOW_SIZE);
+
+        float temp_mean = temp_sum / WINDOW_SIZE;
+
+        const char *prediction = predict_machine_state(
+            sound_std,
+            sound_peak_to_peak,
+            sound_mean,
+            sound_rms,
+            sound_max,
+            temp_mean,
+            vib_mean,
+            vib_rms
+        );
+
+        printf("%d,%llu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%s\n",
+               window_id,
+               get_timestamp_ms(),
+               sound_std,
+               sound_peak_to_peak,
+               sound_mean,
+               sound_rms,
+               sound_max,
+               temp_mean,
+               vib_mean,
+               vib_rms,
+               prediction);
     }
-    ESP_LOGI(TAG, "Data collection complete");
+
+    ESP_LOGI(TAG, "Prediction complete");
 }
